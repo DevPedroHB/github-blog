@@ -1,9 +1,21 @@
-import { HomeContainer } from "./styles";
+import { CardPost } from "./components/CardPost";
+import { Profile } from "./components/Profile";
+import { Search } from "./components/Search";
+import { PostsListContainer } from "./styles";
 
 export function Home() {
   return (
-    <HomeContainer>
-      <h1>Home</h1>
-    </HomeContainer>
+    <>
+      <Profile />
+      <Search />
+      <PostsListContainer>
+        <CardPost />
+        <CardPost />
+        <CardPost />
+        <CardPost />
+        <CardPost />
+        <CardPost />
+      </PostsListContainer>
+    </>
   );
 }
