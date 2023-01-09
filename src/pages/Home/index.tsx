@@ -12,7 +12,7 @@ const repoName = import.meta.env.VITE_GITHUB_REPONAME;
 export interface IPost {
   title: string;
   body: string;
-  created_at: string;
+  created_at: Date;
   number: number;
   html_url: string;
   comments: number;
@@ -46,7 +46,6 @@ export function Home() {
     getPosts();
   }, []);
 
-  console.log(posts);
   return (
     <>
       <Profile />

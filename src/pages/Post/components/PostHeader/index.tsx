@@ -24,8 +24,6 @@ export function PostHeader({ postData, isLoading }: PostHeaderProps) {
     navigate(-1);
   }
 
-  const formattedDate = relativeDateFormatter(postData?.created_at);
-
   return (
     <PostHeaderContainer>
       {isLoading ? (
@@ -54,7 +52,7 @@ export function PostHeader({ postData, isLoading }: PostHeaderProps) {
             </li>
             <li>
               <FontAwesomeIcon icon={faCalendar} />
-              {formattedDate}
+              {relativeDateFormatter(postData.created_at)}
             </li>
             <li>
               <FontAwesomeIcon icon={faComment} />

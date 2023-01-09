@@ -60,4 +60,16 @@ export const GlobalStyles = createGlobalStyle`
   button {
     cursor: pointer;
   }
+
+  @media screen and (max-width: 1024px) {
+    html {
+      font-size: 97.5%;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    html {
+      font-size: 87.5%;
+    }
+  }
 `;

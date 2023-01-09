@@ -1,5 +1,9 @@
-import moment from "moment";
+import { formatDistanceToNow } from "date-fns";
+import ptBR from "date-fns/locale/pt-BR";
 
-export function relativeDateFormatter(date: string) {
-  return moment(date).fromNow();
+export function relativeDateFormatter(date: Date) {
+  return formatDistanceToNow(new Date(date), {
+    addSuffix: true,
+    locale: ptBR,
+  });
 }
