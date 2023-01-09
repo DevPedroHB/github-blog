@@ -1,31 +1,39 @@
 import { createGlobalStyle } from "styled-components";
+import firaCode from "../assets/fonts/FiraCode-Regular.woff";
 
 export const GlobalStyles = createGlobalStyle`
+  @font-face {
+    font-family: 'FiraCode';
+    src: url(${firaCode}) format('woff');
+    font-weight: 400;
+    font-style: normal;
+  }
+
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 
     :focus {
-    outline: 0;
-    box-shadow: 0 0 0 2px ${({ theme }) => theme.colors["brand-blue"]};
-  }
+      outline: 0;
+      box-shadow: 0 0 0 2px ${({ theme }) => theme.colors["brand-blue"]};
+    }
 
-  ::-webkit-scrollbar {
-    width: 0.4rem;
-    height: 0.4rem;
-    background-color: ${({ theme }) => theme.colors["base-profile"]};
-    border-radius: 6px;
-  }
+    ::-webkit-scrollbar {
+      width: 0.4rem;
+      height: 0.4rem;
+      background-color: ${({ theme }) => theme.colors["base-profile"]};
+      border-radius: 6px;
+    }
 
-  ::-webkit-scrollbar-thumb {
-    background-color: ${({ theme }) => theme.colors["brand-blue"]};
-    border-radius: 6px;
-  }
+    ::-webkit-scrollbar-thumb {
+      background-color: ${({ theme }) => theme.colors["brand-blue"]};
+      border-radius: 6px;
+    }
 
-  ::-webkit-scrollbar-thumb:hover {
-    background-color: ${({ theme }) => theme.colors["base-input"]};
-  }
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: ${({ theme }) => theme.colors["base-span"]};
+    }
   }
 
   body {
